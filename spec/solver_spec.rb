@@ -23,4 +23,14 @@ describe Solver do
       expect(@solver.factorial(-2)).to eq('Please enter a number greater than or equal to 0')
     end
   end
+
+  context '#reverse method' do
+    it 'returns an empty string when the argument is empty' do
+      expect(@solver.reverse('')).to eq('')
+    end
+
+    it 'reverses a string' do
+      expect(@solver.reverse('hello')).to eq('olleh')
+    end
+  end
 end
