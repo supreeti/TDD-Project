@@ -33,4 +33,22 @@ describe Solver do
       expect(@solver.reverse('hello')).to eq('olleh')
     end
   end
+
+  context '#fizzbuzz method' do
+    it 'returns "fizz" when divisible by 3' do
+      expect(@solver.fizzbuzz(3)).to eq('fizz')
+    end
+
+    it 'returns "buzz" when divisible by 5' do
+      expect(@solver.fizzbuzz(5)).to eq('buzz')
+    end
+
+    it 'returns "fizzbuzz" when divisible by both 3 and 5' do
+      expect(@solver.fizzbuzz(15)).to eq('fizzbuzz')
+    end
+
+    it 'returns the number as a string when not divisible by 3 or 5' do
+      expect(@solver.fizzbuzz(7)).to eq('7')
+    end
+  end
 end
